@@ -1,0 +1,26 @@
+.Hero {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to right, #FFD3A5, #FD6585);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 180px; /* Adjust as per NavBar's height */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+  }
+  

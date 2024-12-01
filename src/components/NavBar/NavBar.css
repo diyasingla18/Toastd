@@ -1,0 +1,212 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .search-bar-container {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+  }
+  
+  .search-input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li:hover {
+    color: #007bff;
+  }
+  
+  /* Sort By Button Aligned Left */
+  .sort-container {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    padding: 10px 0;
+    width: 100%;
+  }
+  
+  .sort-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .sort-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .sort-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 5px;
+  }
+  
+  .sort-dropdown-content a {
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+  }
+  
+  .sort-dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .sort-container:hover .sort-dropdown-content {
+    display: block;
+  }
+  
+  /* Sign Up Button Aligned to Top Right */
+  .sign-up-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #7b7e80;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sign-up-btn:hover {
+    background-color: #5b585a;
+  }
+  
+  /* Hamburger menu icon */
+  .menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-wrap: wrap;
+      justify-content: space-between; /* Adjust for smaller screens */
+    }
+  
+    .search-bar-container {
+      margin-left: 10px;
+      width: 100%; /* Ensure it takes up available space */
+      margin-bottom: 10px; /* Add some space below */
+    }
+  
+    .search-input {
+      font-size: 14px; /* Adjust font size */
+    }
+  
+    .nav-links {
+      display: none; /* Hide nav items by default */
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .nav-links li {
+      text-align: center; /* Center the nav items */
+      margin: 10px 0;
+    }
+  
+    .nav-links.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .sign-up-btn {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin-top: 10px; /* Move the button down on smaller screens */
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  
+    .sort-container {
+      display: block;
+      margin-top: 10px; /* Add space above the sort section */
+      text-align: center;
+    }
+  
+    .sort-dropdown-content {
+      width: 100%;
+      min-width: 100%;
+      position: relative; /* Make the dropdown fit on mobile */
+    }
+  
+    .sort-dropdown-content a {
+      text-align: center; /* Center the dropdown options */
+    }
+  
+    /* Show nav links when the search input is focused */
+    .search-input:focus + .nav-links {
+      display: flex;
+    }
+  
+    /* Show the menu toggle button on small screens */
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
